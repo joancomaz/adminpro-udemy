@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
-
 // Módulos
+import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';  // ng2-charts
 
+// Componentes
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
@@ -17,6 +18,8 @@ import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { PipesModule } from '../pipes/pipes.module';
 import { ProfileComponent } from './profile/profile.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
 
 @NgModule({
   declarations: [
@@ -29,14 +32,17 @@ import { ProfileComponent } from './profile/profile.component';
     AccountSettingsComponent,
     PromesasComponent,
     RxjsComponent,
-    ProfileComponent
+    ProfileComponent,
+    UsuariosComponent,
+    ModalUploadComponent
   ],
   imports: [
     SharedModule,
     PAGES_ROUTES,
     FormsModule,
     ChartsModule,
-    PipesModule
+    PipesModule,
+    CommonModule
   ],
   exports: [
     PagesComponent,
